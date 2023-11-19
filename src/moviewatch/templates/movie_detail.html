@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,12 +10,14 @@
   <body>
     <h1>Movie List</h1>
     <h2>{{ movie.title }}</h2>
-      <p><strong>Director:</strong> {{ movie.director }}</p>
-      <p><strong>Release Date:</strong> {{ movie.release_date }}</p>
+    <p><strong>Director:</strong> {{ movie.description }}</p>
+    <p><strong>Release Date:</strong> {{ movie.year_released }}</p>
+      {% comment %}
       <p><strong>Genre:</strong> {{ movie.genre }}</p>
       <p><strong>Rating:</strong> {{ movie.rating }}</p>
+      {% endcomment %}
 
-      <a href="{% url 'movie_edit' movie.pk %}">Edit</a> |
+      <a href="{% url 'movie_edit' movie.pk %}">Edit / Update </a> |
       <a href="{% url 'movie_delete' movie.pk %}">Delete</a>
 
  
